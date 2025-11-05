@@ -7,13 +7,16 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Badge } from "@/components/ui/badge"
 import { Hotel, MapPin, Star, Wifi, Car, Utensils, Loader2 } from 'lucide-react'
-
+interface hotelimage{
+  thumbnail:string;
+  original_image:string;
+}
 interface Hotel {
   id: string
   name: string
   rating: number
   price: string
-  image: string
+  images: hotelimage[]
   amenities: string[]
   location: string
   distance: string
@@ -164,7 +167,7 @@ export function HotelSearch() {
                   <Card key={hotel.id}>
                     <CardContent className="p-0">
                       <img
-                        src={hotel.image || "/placeholder.svg"}
+                        src={hotel.images.length ?(hotel.images[0].thumbnail || "/placeholder.svg"):"/placeholder.svg"}
                         alt={hotel.name}
                         className="w-full h-48 object-cover rounded-t-lg"
                       />
@@ -182,7 +185,7 @@ export function HotelSearch() {
                         </div>
                         <div className="text-xs text-gray-500 mb-3">{hotel.distance}</div>
                         <div className="flex flex-wrap gap-1 mb-3">
-                          {hotel.amenities.map((amenity, index) => (
+                          {hotel.amenities && hotel.amenities.map((amenity, index) => (
                             <Badge key={index} variant="secondary" className="text-xs flex items-center space-x-1">
                               {getAmenityIcon(amenity)}
                               <span>{amenity}</span>

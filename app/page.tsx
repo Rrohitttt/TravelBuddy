@@ -406,10 +406,11 @@ const generateItinerary = async () => {
           </TabsContent>
 
           <TabsContent value="search" className="space-y-6">
-            <Tabs defaultValue="flights" className="w-full">
+            <Tabs defaultValue="hotels" className="w-full">
               <TabsList className="grid w-full grid-cols-3">
-                <TabsTrigger value="flights">✈️ Flights</TabsTrigger>
+               
                 <TabsTrigger value="hotels">🏨 Hotels</TabsTrigger>
+                 <TabsTrigger value="flights">✈️ Flights</TabsTrigger>
                 <TabsTrigger value="buses">🚌 Buses</TabsTrigger>
               </TabsList>
 

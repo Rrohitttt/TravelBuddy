@@ -1,4 +1,4 @@
-// File: C:\Users\surya\OneDrive\Desktop\travelbuddy3\tb1project\app\layout.tsx
+// File: C:\Users\surya\OneDrive\Desktop\OneDrive\Documents\Projects\CloudTravelBuddy\UI\app\layout.tsx
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
