@@ -21,7 +21,6 @@ interface Hotel {
   location: string
   distance: string
 }
-
 export function HotelSearch() {
   const [destination, setDestination] = useState("")
   const [checkin, setCheckin] = useState("")
